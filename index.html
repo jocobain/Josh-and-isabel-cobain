@@ -2,10 +2,71 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Josh e Isabel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh & Isabel - O Mundo de Kurt</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            color: #FFD700;
+            margin-top: 100px;
+        }
+        .container {
+            position: relative;
+            overflow: hidden;
+        }
+        .rosas {
+            position: absolute;
+            animation: cair 5s infinite;
+        }
+        @keyframes cair {
+            0% { top: -10%; }
+            100% { top: 100%; }
+        }
+        .kurt {
+            margin-top: 50px;
+            font-size: 2em;
+            animation: pular 2s infinite alternate;
+        }
+        @keyframes pular {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-30px); }
+        }
+        .musica {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem-vindos ao site do Josh e da Isabel!</h1>
-    <p>Em breve, mais novidades...</p>
+
+    <h1>Bem-vindos ao Mundo de Josh & Isabel</h1>
+
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kurt_Cobain_1993.jpg/800px-Kurt_Cobain_1993.jpg" alt="Kurt Cobain" class="kurt">
+        
+        <!-- Efeito das rosas caindo -->
+        <div class="rosas">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Rose_in_Thailand.jpg" alt="Rosa" width="50">
+        </div>
+    </div>
+
+    <!-- Música de fundo -->
+    <div class="musica">
+        <audio controls autoplay loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+
 </body>
 </html>
