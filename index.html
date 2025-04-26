@@ -1,93 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kabel Cobain OS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url('bg.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Comfortaa', cursive;
-      color: white;
-      overflow: hidden;
-    }
-
-    #closeButton {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      border: 2px solid #800080;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 12px;
-      font-size: 22px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      z-index: 9999;
-      box-shadow: 0 0 12px #800080;
-    }
-
-    #closeButton:hover {
-      background-color: #1a001a;
-      transform: scale(1.1);
-    }
-
-    #smokeEffect {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 200px;
-      height: 200px;
-      background: url('smoke.gif') no-repeat center center;
-      background-size: contain;
-      display: none;
-      z-index: 99999;
-    }
-
-    #farewellText {
-      position: fixed;
-      top: 60%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.7);
-      border: 1px solid #800080;
-      padding: 10px 20px;
-      font-size: 18px;
-      border-radius: 10px;
-      display: none;
-      z-index: 99999;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh e Isabel Cobain</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <div id="closeButton">❌</div>
-  <div id="smokeEffect"></div>
-  <div id="farewellText">Volta logo, Kabel Cobain sente tua falta...</div>
-
-  <script>
-    const closeBtn = document.getElementById("closeButton");
-    const smoke = document.getElementById("smokeEffect");
-    const farewell = document.getElementById("farewellText");
-
-    closeBtn.addEventListener("click", () => {
-      smoke.style.display = "block";
-      farewell.style.display = "block";
-      const audio = new Audio('guitar.mp3');
-      audio.play();
-
-      setTimeout(() => {
-        smoke.style.display = "none";
-        farewell.style.display = "none";
-        window.open('', '_self').close();
-      }, 3000);
-    });
-  </script>
+    <header>
+        <h1>Bem-vindo ao site de Josh e Isabel Cobain</h1>
+    </header>
+    <section id="intro">
+        <p>Esta é a nossa jornada desde a sala errada até aqui! Um lugar de mistérios e emoções...</p>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
